@@ -1,3 +1,11 @@
+.titulo{
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
 .formulario{
     display: flex;
     flex-direction: column;
@@ -16,9 +24,9 @@
 
 .formulario__inputTexto{
     margin-top: 20px;
-    padding: 10px 0;
+    padding: 20px 0;
     border: 2px black solid;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 20px;
     
 }
