@@ -1,0 +1,23 @@
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 5em 0;
+    margin-left: 5%;
+
+}
+
+.formulario__textos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formulario__inputTexto{
+    margin-top: 20px;
+    padding: 10px 0;
+    border: 2px black solid;
+    text-align: center;
+    border-radius: 10px;
+    
+}

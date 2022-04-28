@@ -1,0 +1,38 @@
+
+
+.header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+
+}
+
+.header__imagem{
+    height: 100px;
+    margin-left: 5%;
+}
+
+.header__lista{
+   display: flex;
+    margin-right: 5%;
+}
+
+.header__link{
+    font-family: 'Roboto', sans-serif;;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 10px 20px;
+    border: 2px solid #17288a;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-weight: 200;
+    
+}
+
+.header__link a{
+font-family: 'Roboto', sans-serif;;
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
