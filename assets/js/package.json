@@ -1,0 +1,20 @@
+{
+  "name": "aproveitamento-de-chapas-de-a-o",
+  "version": "1.0.0",
+  "description": "Projeto feito em HTML5, CSS3 e JavaScript para criação de uma plataforma para calcular o melhor aproveitamento das chapas de aço galvanizado, aço INOX304 e INOX430 na empresa onde trabalho atualmente que é a Avioeste. \r   Tendo como objetivo facilitar a criação e manutenção das fichas tecnicas das peças criadas pela engenharia sabendo a quantidade exata de materia prima que sera utilizado e tendo uma noção inicial de todos os custos do produto e facilitando a criação do programa de corte pois ja sabe qual chapa tem melhor aproveitamento.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JnFerri/Aproveitamento-de-Chapas-de-aco.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JnFerri/Aproveitamento-de-Chapas-de-aco/issues"
+  },
+  "homepage": "https://github.com/JnFerri/Aproveitamento-de-Chapas-de-aco#readme"
+}
