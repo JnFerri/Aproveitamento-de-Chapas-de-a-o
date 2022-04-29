@@ -1,0 +1,19 @@
+footer{
+    background-color: black;
+}
+
+.footer__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    text-align: center;
+
+}
+
+.footer__copyright, .footer__contato{
+    color: white;
+    width: 50%;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}

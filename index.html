@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/formulario.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 <body>
 
@@ -24,6 +25,7 @@
         
         <form action="" class="formulario">
             <h2 class="titulo">Coloque os valores :</h2>
+            <p class="alerta">Utilize " . " em vez de " , " nos numeros. </p>
             <section class="formulario__textos">
                     <input type="text" class="formulario__inputTexto" name="pecaX" id="pecaX" placeholder="Medida X da Peça">
                     <input type="text"  class="formulario__inputTexto" name="pecaY" id="pecaY" placeholder="Medida Y da Peça">
@@ -31,11 +33,14 @@
             </section>
 
             <fieldset class="formulario__seletores">
-                <label for="Material">Material: </label>
-                    <select name="material" id="material" onclick="seletorMaterial()">
-                        <option value="galvanizado">Galvanizado</option>
-                        <option value="inox304">Inox304</option>
-                        <option value="inox430">Inox430</option>
+                    <select name="material" id="material" class="seletor" onclick="seletorMaterial()" >
+                        <option value="">Material</option>
+                        <option value="galvanizado" >Galvanizado</option>
+                        <option value="inox304" >Inox304</option>
+                        <option value="inox430" >Inox430</option>
+                    </select>
+                    <select name="espessura" id="espessura" class="seletor">
+                        <option value="">Espessura</option>
                     </select>
             </fieldset>
 
@@ -50,5 +55,6 @@
     <script src="assets/js/index.js"></script>
     <script src="assets/js/header.js"></script>
     <script src="assets/js/footer.js"></script>
+    <script src="assets/js/seletorMateriaEspessura.js"></script>
 </body>
 </html>
