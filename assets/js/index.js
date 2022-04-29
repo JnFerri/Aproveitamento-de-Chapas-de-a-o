@@ -1,4 +1,4 @@
-import { Peca } from ""
+import { Peca } from "./Peca.js"
 
 var calcDivisaoPeca1 = ( medidaXchapa, medidaXpeca ) => medidaXchapa / medidaXpeca
 
