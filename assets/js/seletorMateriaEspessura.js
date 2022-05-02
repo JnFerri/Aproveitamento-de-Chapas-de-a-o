@@ -1,6 +1,9 @@
-var espessuraGalvanizado = ["0.50mm" , "0.95mm" , "1.25mm", "1.95mm", "2.70mm"]
 
-var espessuraInox304 = ["0.80mm" , "1.20mm" , "1.50mm", "2mm", "4mm"]
+
+
+var espessuraGalvanizado = [0.50 , 0.95 , 1.25, 1.95, 2.70]
+
+var espessuraInox304 = [0.80 , 1.20 , 1.50, 2, 4]
 
 var material = document.getElementById('material')
 var espessura = document.getElementById('espessura')
