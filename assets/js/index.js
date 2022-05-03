@@ -1,4 +1,10 @@
 import { Peca } from "./Peca.js"
+import {publicarFooter} from "./footer.js"
+import {publicarHeader} from "./header.js"
+import {seletorMaterial} from "./seletorMateriaEspessura.js"
+
+document.onload = publicarFooter()
+document.onload = publicarHeader();
 
 var calcDivisaoPeca1 = ( medidaXchapa, medidaXpeca ) => medidaXchapa / medidaXpeca
 

@@ -7,7 +7,7 @@ var espessuraInox304 = [0.80 , 1.20 , 1.50, 2, 4]
 
 var material = document.getElementById('material')
 var espessura = document.getElementById('espessura')
-function seletorMaterial(){
+export function seletorMaterial(){
 if(material.selectedIndex === 1 ){
     espessura.innerHTML = ''
     for(i=0; i<espessuraGalvanizado.length; i++){

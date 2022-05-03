@@ -1,5 +1,5 @@
 document.onload = publicarHeader();
-function publicarHeader(){
+ export function publicarHeader(){
     var header = document.getElementById('header')
     header.innerHTML = `<div class="header__container">
     <img class="header__imagem" src="assets/img/calculos.png" alt="imagem avioeste">
