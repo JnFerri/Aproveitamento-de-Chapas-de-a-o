@@ -4,7 +4,11 @@ import {publicarHeader} from "./header.js"
 import {seletorMaterial} from "./seletorMateriaEspessura.js"
 
 document.onload = publicarFooter()
-document.onload = publicarHeader();
+document.onload = publicarHeader()
+var material = document.getElementById('material')
+
+material.onclick = seletorMaterial()
+
 
 var calcDivisaoPeca1 = ( medidaXchapa, medidaXpeca ) => medidaXchapa / medidaXpeca
 
