@@ -1,11 +1,13 @@
 import { Peca } from "./Peca.js"
-import {publicarFooter} from "./footer.js"
+import {txtFooter} from "./footer.js"
 import {publicarHeader} from "./header.js"
 import {seletorMaterial} from "./seletorMateriaEspessura.js"
-document.onload = publicarFooter()
+console.log(txtFooter)
+var localFooter = document.getElementById('footer')
+localFooter.innerHTML = txtFooter
 document.onload = publicarHeader()
 
-seletorMaterial()
+var teste = 02
 
 var calcDivisaoPeca1 = ( medidaXchapa, medidaXpeca ) => medidaXchapa / medidaXpeca
 

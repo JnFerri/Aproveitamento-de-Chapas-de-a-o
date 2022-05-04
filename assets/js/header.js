@@ -1,4 +1,4 @@
-document.onload = publicarHeader();
+
  export function publicarHeader(){
     var header = document.getElementById('header')
     header.innerHTML = `<div class="header__container">
