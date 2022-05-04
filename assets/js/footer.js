@@ -5,7 +5,6 @@ function publicarFooter(){
         <p class="footer__copyright">Site feito por Jean Ferri, todos direitos reservados &copy;</p>
         <p class="footer__contato">Contato : jeanferrimh@gmail.com</p>
     </div>`
-    console.log('ola')
 }
 
 export {publicarFooter}

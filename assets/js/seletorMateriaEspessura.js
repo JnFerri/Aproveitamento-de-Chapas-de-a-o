@@ -1,11 +1,10 @@
 
-import {Chapa} from "./Chapa.js"
-
+import {espessuraGalvanizado, espessuraInox304} from "./Chapa.js"
 function seletorMaterial(){
-var espessura = document.getElementById('espessura')
+    var espessura = document.getElementById('espessura')
 if(material.selectedIndex === 1 ){
     espessura.innerHTML = ''
-    for(i=0; i<Chapa.espessuraGalvanizado.length; i++){
+    for(i=0; i<espessuraGalvanizado.length; i++){
         espessura.innerHTML += `
     <option value="${espessuraGalvanizado[i]}" class="valorEspessura">${espessuraGalvanizado[i]}</option>
     `
@@ -21,4 +20,4 @@ if(material.selectedIndex === 1 ){
 
 }
 
-export{seletorMaterial}
+export{seletorMaterial, espessura, material}
