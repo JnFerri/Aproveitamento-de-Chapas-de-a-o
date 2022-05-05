@@ -8,5 +8,7 @@ export class Peca{
             this.material = material;
             this.espessura = espessura;
       }
+
+    
 } 
 
