@@ -32,7 +32,7 @@ document.getElementById('botaoFormulario').onclick = function calcularTudo(){
        var calculoPeca2 = Math.round(calcDivisaoPeca(medidasXChapa[0],peca1.medidaYPeca )-0.5) * Math.round(calcDivisaoPeca(medidasYChapa1000[i],peca1.medidaXPeca)-0.5)
         var resultadoPecaHorizontal = `A seguinte chapa : ${medidasXChapa[0]} X ${medidasYChapa1000[i]} com peça na horizontal cabem o total de : ${calculoPeca1} Peças`
         var resultadoPecaVertical = `A seguinte chapa : ${medidasXChapa[0]} X ${medidasYChapa1000[i]} com peça na vertical cabem o total de : ${calculoPeca2} Peças`
-        
+        console.log(resultadoPecaHorizontal)
        
     }
 
