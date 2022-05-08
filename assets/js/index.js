@@ -14,11 +14,11 @@ var espessura = document.getElementById('espessura')
 material.addEventListener("click", seletorMaterial)
 
 var calcDivisaoPeca = ( medidaChapa, medidaPeca ) => medidaChapa / medidaPeca
-var pesoChapa = (espessura, medidasXChapa, medidaYChapa)=> espessura * medidasXChapa * medidaYChapa
+
+var pesoChapa = (espessura, medidasXChapa, medidaYChapa) => (espessura * medidasXChapa * (medidaYChapa + 10) *0.0078) / 1000
+
+var pesoUnd = (pesodaChapa, numeroPecas) => pesodaChapa / numeroPecas
 var localResultado = document.getElementById('resultado')
-
-
-var fatorAco = 0.00788
 
 var medidasYChapaA =[]
 var medidasYChapaB=[]
@@ -84,12 +84,16 @@ document.getElementById('botaoFormulario').onclick = function calcularTudo(){
         
        var quantidadePeca1 = Math.round(calcDivisaoPeca(medidasXChapa[0],peca1.medidaXPeca)-0.5) * Math.round(calcDivisaoPeca(medidasYChapaA[i], peca1.medidaYPeca)-0.5)
        var quantidadePeca2 = Math.round(calcDivisaoPeca(medidasXChapa[0],peca1.medidaYPeca )-0.5) * Math.round(calcDivisaoPeca(medidasYChapaA[i],peca1.medidaXPeca)-0.5)
-        var valorPesoChapa = pesoChapa(peca1.espessura, medidasXChapa, medidasYChapaA[i])
-            console.log(valorPesoChapa)
+        var valorPesoChapaA = pesoChapa(peca1.espessura, medidasXChapa[0], medidasYChapaA[i])
+        var pesoPeca1Horizontal = pesoUnd (valorPesoChapaA, quantidadePeca1)
+        var pesoPeca1Vertical = pesoUnd (valorPesoChapaA, quantidadePeca2)
+        var perda1Horizontal = ((pesoPeca1Horizontal / peca1.pesoSolid)-1) * 100
+        var perda1Vertical = ((pesoPeca1Vertical / peca1.pesoSolid)-1) * 100
+        
 
 
-       var resultado1PecaHorizontal = `<p>A seguinte chapa : ${medidasXChapa[0]} X ${medidasYChapaA[i]} com peça na horizontal cabem o total de : ${quantidadePeca1} Peças</p>`
-       var resultado1PecaVertical = `<p>A seguinte chapa : ${medidasXChapa[0]} X ${medidasYChapaA[i]} com peça na vertical cabem o total de : ${quantidadePeca2} Peças</p>`
+       var resultado1PecaHorizontal = `<p>Horizontal : ${medidasXChapa[0]} X ${medidasYChapaA[i]} : ${quantidadePeca1} Peças / perda = ${perda1Horizontal} </p>`
+       var resultado1PecaVertical = `<p> Vertical : ${medidasXChapa[0]} X ${medidasYChapaA[i]} : ${quantidadePeca2} Peças / perda = ${perda1Vertical} </p>`
        localResultado.innerHTML += `${resultado1PecaHorizontal}`
        localResultado.innerHTML +=`${resultado1PecaVertical}`
     }
@@ -99,11 +103,15 @@ document.getElementById('botaoFormulario').onclick = function calcularTudo(){
         
        var quantidadePeca3 = Math.round(calcDivisaoPeca(medidasXChapa[1],peca1.medidaXPeca)-0.5) * Math.round(calcDivisaoPeca(medidasYChapaB[a], peca1.medidaYPeca)-0.5)
        var quantidadePeca4 = Math.round(calcDivisaoPeca(medidasXChapa[1],peca1.medidaYPeca )-0.5) * Math.round(calcDivisaoPeca(medidasYChapaB[a],peca1.medidaXPeca)-0.5)
+       var valorPesoChapaB = pesoChapa(peca1.espessura, medidasXChapa[1], medidasYChapaB[a])
+       var pesoPeca2Horizontal = pesoUnd (valorPesoChapaB, quantidadePeca3)
+        var pesoPeca2Vertical = pesoUnd (valorPesoChapaB, quantidadePeca4)
+        var perda2Horizontal = ((pesoPeca2Horizontal / peca1.pesoSolid)-1) * 100
+        var perda2Vertical = ((pesoPeca2Vertical / peca1.pesoSolid)-1) * 100
 
 
-
-        var resultado2PecaHorizontal= `<p>A seguinte chapa : ${medidasXChapa[1]} X ${medidasYChapaB[a]} com peça na horizontal cabem o total de : ${quantidadePeca3} Peças</p>` 
-        var resultado2PecaVertical = `<p>A seguinte chapa : ${medidasXChapa[1]} X ${medidasYChapaB[a]} com peça na vertical cabem o total de : ${quantidadePeca4} Peças</p>`
+        var resultado2PecaHorizontal= `<p>Horizontal: ${medidasXChapa[1]} X ${medidasYChapaB[a]} : ${quantidadePeca3} Peças / Perda = ${perda2Horizontal} </p>` 
+        var resultado2PecaVertical = `<p>Horizontal: ${medidasXChapa[1]} X ${medidasYChapaB[a]} : ${quantidadePeca4} Peças / Perda = ${perda2Vertical} </p>`
         localResultado.innerHTML +=`${resultado2PecaHorizontal}`
         localResultado.innerHTML +=`${resultado2PecaVertical}`
         
