@@ -15,7 +15,7 @@ material.addEventListener("click", seletorMaterial)
 
 var calcDivisaoPeca = ( medidaChapa, medidaPeca ) => medidaChapa / medidaPeca
 
-var pesoChapa = (espessura, medidasXChapa, medidaYChapa) => (espessura * medidasXChapa * (medidaYChapa + 10) *0.0078) / 1000
+var pesoChapa = (espessura, medidasXChapa, medidaYChapa) => (espessura * (medidasXChapa +10) * (medidaYChapa + 10) *0.00788) / 1000
 
 var pesoUnd = (pesodaChapa, numeroPecas) => pesodaChapa / numeroPecas
 var localResultado = document.getElementById('resultado')
@@ -35,50 +35,50 @@ document.getElementById('botaoFormulario').onclick = function calcularTudo(){
     
 
     if(peca1.espessura == 0.5 ){
-        medidasXChapa.push(1000,1200)
+        medidasXChapa.push(990,1190)
         medidasYChapaA.push(2990)
     }
     if (peca1.espessura == 0.95){
-        medidasXChapa.push(1000,1200)
+        medidasXChapa.push(990,1190)
        medidasYChapaA.push(1620, 1680 , 2000, 2410, 2990)
        medidasYChapaB.push(2090, 2615, 2771, 2990)
     }
 
     if (peca1.espessura == 1.25 ){
-        medidasXChapa.push(1000,1200)
+        medidasXChapa.push(990,1190)
         medidasYChapaA.push(2410,2600,2990)
         medidasYChapaB.push(1565, 1665, 2490, 2850, 2990)
     }
     if(peca1.espessura == 1.95 ){
-        medidasXChapa.push(1000,1200)
+        medidasXChapa.push(990,1190)
         medidasYChapaA.push(1660, 2860, 2990)
         medidasYChapaB.push(1690, 2000, 2410, 2990)
     }
     if(peca1.espessura == 2.7 ){
-        medidasXChapa.push(1000,1200)
+        medidasXChapa.push(990,1190)
         medidasYChapaB.push(2000)
     }
     if(peca1.espessura == 0.8 ){
-        medidasXChapa.push(1040, 1240)
+        medidasXChapa.push(1030, 1230)
         medidasYChapaA.push(1620, 2380, 2670, 2890)
         medidasYChapaA.push(3000)
     }
     if(peca1.espessura == 1.2){
-        medidasXChapa.push(1040, 1240)
+        medidasXChapa.push(1030, 1230)
         medidasYChapaA.push(2320, 2900)
         medidasYChapaB.push(1840, 2390, 2690, 2990)
     }
     if(peca1.espessura == 1.5){
-        medidasXChapa.push(1040, 1240)
+        medidasXChapa.push(1030, 1230)
         medidasYChapaA.push(2390)
         medidasYChapaB.push(2003, 2315,2990)
     }
     if(peca1.espessura == 2){
-        medidasXChapa.push(1040, 1240)
+        medidasXChapa.push(1030, 1230)
         medidasYChapaB.push(2990)
     }
     if(peca1.espessura == 4){
-        medidasXChapa.push(1040, 1240)
+        medidasXChapa.push(1030, 1230)
         medidasYChapaB.push(2990)
     }
 
@@ -95,8 +95,43 @@ document.getElementById('botaoFormulario').onclick = function calcularTudo(){
         
 
 
-       var resultado1PecaHorizontal = `<p>Horizontal : ${medidasXChapa[0]} X ${medidasYChapaA[i]} : ${quantidadePeca1} Peças / perda = ${perda1Horizontal} </p>`
-       var resultado1PecaVertical = `<p> Vertical : ${medidasXChapa[0]} X ${medidasYChapaA[i]} : ${quantidadePeca2} Peças / perda = ${perda1Vertical} </p>`
+       var resultado1PecaHorizontal = `<div class="resultado__box">
+       <ul type="none">
+           <li>
+               <h3 class="resultado__medida">${medidasXChapa[0]+10} X ${medidasYChapaA[i]+10}</h3>
+           </li>
+           <li>
+               <p class="resultado__orientacao">Horizontal</p>
+           </li>
+           <li>
+               <p class="resultado__quantidade">${quantidadePeca1} Peças</p>
+           </li>
+           <li>
+               <p class="resultado__perca">${perda1Horizontal.toFixed(3)}%</p>
+           </li>
+       </ul>
+       </div>`
+       var resultado1PecaVertical =
+       `<div class="resultado__box">
+       <ul type="none">
+           <li>
+               <h3 class="resultado__medida">${medidasXChapa[0]+10} X ${medidasYChapaA[i]+10}</h3>
+           </li>
+           <li>
+               <p class="resultado__orientacao">Vertical</p>
+           </li>
+           <li>
+               <p class="resultado__quantidade">${quantidadePeca2} Peças</p>
+           </li>
+           <li>
+               <p class="resultado__perca">${perda1Vertical.toFixed(3)}%</p>
+           </li>
+       </ul>
+       </div>`
+       
+       
+
+
        localResultado.innerHTML += `${resultado1PecaHorizontal}`
        localResultado.innerHTML +=`${resultado1PecaVertical}`
     }
@@ -113,8 +148,40 @@ document.getElementById('botaoFormulario').onclick = function calcularTudo(){
         var perda2Vertical = ((pesoPeca2Vertical / peca1.pesoSolid)-1) * 100
 
 
-        var resultado2PecaHorizontal= `<p>Horizontal: ${medidasXChapa[1]} X ${medidasYChapaB[a]} : ${quantidadePeca3} Peças / Perda = ${perda2Horizontal} </p>` 
-        var resultado2PecaVertical = `<p>Vertical: ${medidasXChapa[1]} X ${medidasYChapaB[a]} : ${quantidadePeca4} Peças / Perda = ${perda2Vertical} </p>`
+        var resultado2PecaHorizontal= `<div class="resultado__box">
+        <ul type="none">
+            <li>
+                <h3 class="resultado__medida">${medidasXChapa[1]+10} X ${medidasYChapaB[a]+10}</h3>
+            </li>
+            <li>
+                <p class="resultado__orientacao">Horizontal</p>
+            </li>
+            <li>
+                <p class="resultado__quantidade">${quantidadePeca3} Peças</p>
+            </li>
+            <li>
+                <p class="resultado__perca">${perda2Horizontal.toFixed(3)}%</p>
+            </li>
+        </ul>
+        </div>`
+        var resultado2PecaVertical = 
+        `<div class="resultado__box">
+<ul type="none">
+    <li>
+        <h3 class="resultado__medida">${medidasXChapa[1]+10} X ${medidasYChapaB[a]+10}</h3>
+    </li>
+    <li>
+        <p class="resultado__orientacao">Horizontal</p>
+    </li>
+    <li>
+        <p class="resultado__quantidade">${quantidadePeca4} Peças</p>
+    </li>
+    <li>
+        <p class="resultado__perca">${perda2Vertical.toFixed(3)}%</p>
+    </li>
+</ul>
+</div>`
+        
         localResultado.innerHTML +=`${resultado2PecaHorizontal}`
         localResultado.innerHTML +=`${resultado2PecaVertical}`
         
