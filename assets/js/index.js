@@ -26,6 +26,9 @@ var medidasYChapaB=[]
 
 var medidasXChapa = []
 
+
+
+
 document.getElementById('botaoFormulario').onclick = function calcularTudo(){
     const peca1 = new Peca(document.getElementById('pecaX').value , document.getElementById('pecaY').value, document.getElementById('pesoSolid').value, document.getElementById('material').value, document.getElementById('espessura').value)
 
@@ -111,7 +114,7 @@ document.getElementById('botaoFormulario').onclick = function calcularTudo(){
 
 
         var resultado2PecaHorizontal= `<p>Horizontal: ${medidasXChapa[1]} X ${medidasYChapaB[a]} : ${quantidadePeca3} Peças / Perda = ${perda2Horizontal} </p>` 
-        var resultado2PecaVertical = `<p>Horizontal: ${medidasXChapa[1]} X ${medidasYChapaB[a]} : ${quantidadePeca4} Peças / Perda = ${perda2Vertical} </p>`
+        var resultado2PecaVertical = `<p>Vertical: ${medidasXChapa[1]} X ${medidasYChapaB[a]} : ${quantidadePeca4} Peças / Perda = ${perda2Vertical} </p>`
         localResultado.innerHTML +=`${resultado2PecaHorizontal}`
         localResultado.innerHTML +=`${resultado2PecaVertical}`
         

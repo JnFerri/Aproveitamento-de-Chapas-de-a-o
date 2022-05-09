@@ -2,3 +2,72 @@ main{
     background: rgb(0,63,168);
 background: linear-gradient(160deg, rgba(0,63,168,1) 0%, rgba(9,79,121,1) 49%, rgba(21,150,171,0.9248074229691877) 100%);
 }
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.horizontal{
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    width: 400px;
+    height: 150px;
+    border: solid 2px black;
+}
+
+.vertical{
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    width: 150px;
+    height: 400px;
+    margin-right: 5%;
+    border: solid 2px black;
+    
+}
+
+.horizontal h3{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+}
+
+.horizontal__X{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    left: 1%;
+}
+.horizontal__Y{
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    bottom: 0.1%;
+    right: 50%;
+}
+
+.vertical h3{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: rotate(90deg);
+    
+}
+
+.vertical__Y{
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 1%;
+}
+.vertical__X{
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    bottom: 0.1%;
+    right: 50%;
+}

@@ -22,32 +22,44 @@
     </header>
 
     <main>
-        
-        <form action="" class="formulario">
-            <h2 class="titulo">Coloque os valores :</h2>
-            <p class="alerta">Utilize " . " em vez de " , " nos numeros. </p>
-            <section class="formulario__textos">
-                    <input type="text" class="formulario__inputTexto" name="pecaX" id="pecaX" placeholder="Medida X da Peça">
-                    <input type="text"  class="formulario__inputTexto" name="pecaY" id="pecaY" placeholder="Medida Y da Peça">
-                    <input type="number" class="formulario__inputTexto"  name="pesoSolid" id="pesoSolid" placeholder="Peso do Solid em kg">
-            </section>
+       <div class="container">
+           
+           <form action="" class="formulario">
+               <h2 class="titulo">Coloque os valores :</h2>
+               <p class="alerta">Utilize " . " em vez de " , " nos numeros. </p>
+               <section class="formulario__textos">
+                       <input type="text" class="formulario__inputTexto" name="pecaX" id="pecaX" placeholder="Medida X da Peça">
+                       <input type="text"  class="formulario__inputTexto" name="pecaY" id="pecaY" placeholder="Medida Y da Peça">
+                       <input type="number" class="formulario__inputTexto"  name="pesoSolid" id="pesoSolid" placeholder="Peso do Solid em kg">
+               </section>
+               <fieldset class="formulario__seletores">
+                       <select name="material" id="material" class="seletor">
+                           <option value="">Material</option>
+                           <option value="galvanizado">Galvanizado</option>
+                           <option value="inox304" >Inox304</option>
+                           <option value="inox430" >Inox430</option>
+                       </select>
+                       <select name="espessura" id="espessura" class="seletor">
+                           <option value="">Espessura</option>
+                       </select>
+                       <input type="button" value="Calcular" class="formulario__botao" id="botaoFormulario" onclick="calcularTudo()">
+               </fieldset>
 
-            <fieldset class="formulario__seletores">
-                    <select name="material" id="material" class="seletor">
-                        <option value="">Material</option>
-                        <option value="galvanizado">Galvanizado</option>
-                        <option value="inox304" >Inox304</option>
-                        <option value="inox430" >Inox430</option>
-                    </select>
-                    <select name="espessura" id="espessura" class="seletor">
-                        <option value="">Espessura</option>
-                    </select>
-                    <input type="button" value="Calcular" class="formulario__botao" id="botaoFormulario" onclick="calcularTudo()">
-            </fieldset>
+             </form>
 
-            <div id="resultado"></div>
+        <div class="horizontal">
+            <h3>Peça na Horizontal</h3>
+            <p class="horizontal__X">X</p>
+            <p class="horizontal__Y">Y</p>
+        </div>
 
-        </form>
+        <div class="vertical">
+            <h3>Peça na Vertical</h3>
+            <p class="vertical__X">X</p>
+            <p class="vertical__Y">Y</p>
+        </div>
+    </div>
+        <div id="resultado"></div>
     </main>
  
     <footer id="footer">
