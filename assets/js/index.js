@@ -32,9 +32,9 @@ var medidasXChapa = []
 document.getElementById('botaoFormulario').onclick = function calcularTudo(){
     const peca1 = new Peca(document.getElementById('pecaX').value , document.getElementById('pecaY').value, document.getElementById('pesoSolid').value, document.getElementById('material').value, document.getElementById('espessura').value)
 
-    
+    localResultado.innerHTML = ''
 
-    if(peca1.espessura == 0.5 ){
+    if(peca1.espessura == 0.5 && peca1.material == 'galvanizado' ){
         medidasXChapa.push(990,1190)
         medidasYChapaA.push(2990)
     }
@@ -58,12 +58,12 @@ document.getElementById('botaoFormulario').onclick = function calcularTudo(){
         medidasXChapa.push(990,1190)
         medidasYChapaB.push(2000)
     }
-    if(peca1.espessura == 0.8 ){
+    if(peca1.espessura == 0.8 && peca1.material == 'inox304'){
         medidasXChapa.push(1030, 1230)
         medidasYChapaA.push(1620, 2380, 2670, 2890)
-        medidasYChapaA.push(3000)
+        medidasYChapaB.push(2990)
     }
-    if(peca1.espessura == 1.2){
+    if(peca1.espessura == 1.2 && peca1.material == 'inox304'){
         medidasXChapa.push(1030, 1230)
         medidasYChapaA.push(2320, 2900)
         medidasYChapaB.push(1840, 2390, 2690, 2990)
@@ -73,11 +73,29 @@ document.getElementById('botaoFormulario').onclick = function calcularTudo(){
         medidasYChapaA.push(2390)
         medidasYChapaB.push(2003, 2315,2990)
     }
-    if(peca1.espessura == 2){
+    if(peca1.espessura == 2 && peca1.material == 'inox304'){
         medidasXChapa.push(1030, 1230)
         medidasYChapaB.push(2990)
     }
     if(peca1.espessura == 4){
+        medidasXChapa.push(1030, 1230)
+        medidasYChapaB.push(2990)
+    }
+
+    if(peca1.espessura ==0.5 && peca1.material == 'inox430'){
+        medidasXChapa.push(1030, 1230)
+        medidasYChapaA.push(1830)
+        medidasYChapaB.push(1830)
+    }
+    if(peca1.espessura ==0.8 && peca1.material == 'inox430'){
+        medidasXChapa.push(1030, 1230)
+        medidasYChapaB.push(1875)
+    }
+    if(peca1.espessura == 1.2 && peca1.material == 'inox430'){
+        medidasXChapa.push(1030, 1230)
+        medidasYChapaB.push(2990)
+    }
+    if(peca1.espessura == 2 && peca1.material == 'inox430'){
         medidasXChapa.push(1030, 1230)
         medidasYChapaB.push(2990)
     }
