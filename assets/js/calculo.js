@@ -55,7 +55,7 @@ export function calcularTudo(){
     }
     if(peca1.espessura == 1.5){
         medidasXChapa.push(1030, 1230)
-        medidasYChapaA.push(2390)
+        medidasYChapaA.push(2190)
         medidasYChapaB.push(2003, 2315,2990)
     }
     if(peca1.espessura == 2 && peca1.material == 'inox304'){
