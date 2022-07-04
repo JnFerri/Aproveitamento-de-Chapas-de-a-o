@@ -174,7 +174,7 @@ export function calcularTudo(){
         <h3 class="resultado__medida">${medidasXChapa[1]+10} X ${medidasYChapaB[a]+10}</h3>
     </li>
     <li>
-        <p class="resultado__orientacao">Horizontal</p>
+        <p class="resultado__orientacao">Vertical</p>
     </li>
     <li>
         <p class="resultado__quantidade">${quantidadePeca4} Peças</p>
