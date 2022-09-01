@@ -17,3 +17,14 @@ footer{
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
 }
+
+@media(max-width:798px){
+    .footer__container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__copyright, .footer__contato{
+        width: 95%;
+    }
+}

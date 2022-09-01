@@ -72,3 +72,21 @@ padding-bottom: 50px;
     bottom: 0.1%;
     right: 50%;
 }
+
+@media(max-width:798px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vertical{
+        width: 100px;
+        height: 200px;
+        margin: 10px 0;
+    }
+
+    .horizontal{
+        width: 200px;
+        height: 100px;
+    }
+}

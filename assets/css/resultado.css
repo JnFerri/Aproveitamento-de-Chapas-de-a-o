@@ -41,3 +41,15 @@
     font-size: 24px;
     font-weight: bold;
 }
+
+@media(max-width:798px){
+    .resultado__box{
+        width: 40%;
+
+    }
+
+    #resultado{
+        width: 95%;
+        flex-wrap: wrap;
+    }
+}

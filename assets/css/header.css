@@ -1,11 +1,11 @@
-
+header{
+    align-items: center;
+    text-align: center;
+}
 
 .header__container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: black;
 
+    background: black;
 }
 
 .header__imagem{
