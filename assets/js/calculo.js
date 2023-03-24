@@ -68,8 +68,8 @@ export function calcularTudo(){
         fatorMaterial = 0.008
     }
     if(peca1.espessura == 2 && peca1.material == 'inox304'){
-        medidasXChapa.push(1030, 1230)
-        medidasYChapaB.push(2990)
+        medidasXChapa.push(1230)
+        medidasYChapaB.push(2990,990)
         fatorMaterial = 0.008
     }
     if(peca1.espessura == 4){
@@ -185,7 +185,7 @@ export function calcularTudo(){
                 <p class="resultado__quantidade">${quantidadePeca3} Peças</p>
             </li>
             <li>
-               <p class="resultado__quantidade">Valor em UND = ${(peca1.pesoSolid / valorPesoChapaB).toFixed(4)}</p>
+               <p class="resultado__quantidade">Valor em UND = ${(peca1.pesoSolid / valorPesoChapaB).toFixed(8)}</p>
            </li>
             <li>
                 <p class="resultado__perca">${perda2Horizontal.toFixed(3)}%</p>
@@ -205,7 +205,7 @@ export function calcularTudo(){
         <p class="resultado__quantidade">${quantidadePeca4} Peças</p>
     </li>
     <li>
-               <p class="resultado__quantidade">Valor em UND = ${(peca1.pesoSolid / valorPesoChapaB).toFixed(4)}</p>
+               <p class="resultado__quantidade">Valor em UND = ${(peca1.pesoSolid / valorPesoChapaB).toFixed(8)}</p>
            </li>
     <li>
         <p class="resultado__perca">${perda2Vertical.toFixed(3)}%</p>
