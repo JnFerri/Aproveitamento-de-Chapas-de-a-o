@@ -23,7 +23,7 @@ export function calcularTudo(){
     if(peca1.espessura == 0.5 && peca1.material == 'galvanizado' ){
         medidasXChapa.push(990,1190)
         medidasYChapaA.push(2990)
-        fatorMaterial = 0.0078
+        fatorMaterial = 0.00788
     }
     if (peca1.espessura == 0.95){
         medidasXChapa.push(990,1190)
@@ -36,18 +36,18 @@ export function calcularTudo(){
         medidasXChapa.push(990,1190)
         medidasYChapaA.push(2410,2600,2990)
         medidasYChapaB.push(1565, 1665, 2490, 2850, 2990)
-        fatorMaterial = 0.0078
+        fatorMaterial = 0.00788
     }
     if(peca1.espessura == 1.95 ){
         medidasXChapa.push(990,1190)
         medidasYChapaA.push(1660, 2860, 2990)
         medidasYChapaB.push(1690, 2000, 2410)
-        fatorMaterial = 0.0078
+        fatorMaterial = 0.00788
     }
     if(peca1.espessura == 2.7 ){
         medidasXChapa.push(990,1190)
         medidasYChapaB.push(1990)
-        fatorMaterial = 0.0078
+        fatorMaterial = 0.00788
     }
     if(peca1.espessura == 0.8 && peca1.material == 'inox304'){
         medidasXChapa.push(1030, 1230)
