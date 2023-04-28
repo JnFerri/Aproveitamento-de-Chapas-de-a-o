@@ -34,7 +34,7 @@ export function calcularTudo(){
 
     if (peca1.espessura == 1.25 ){
         medidasXChapa.push(990,1190)
-        medidasYChapaA.push(2410,2600,2990)
+        medidasYChapaA.push(2600)
         medidasYChapaB.push(1565, 1665, 2490, 2850, 2990)
         fatorMaterial = 0.00788
     }
