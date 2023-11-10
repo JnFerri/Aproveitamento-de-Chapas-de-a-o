@@ -52,7 +52,7 @@ export function calcularTudo(){
     if(peca1.espessura == 0.8 && peca1.material == 'inox304'){
         medidasXChapa.push(1030, 1230)
         medidasYChapaA.push(1620, 2380, 2670, 2890)
-        medidasYChapaB.push(2990)
+        medidasYChapaB.push(1640,2380,2990)
         fatorMaterial = 0.008
     }
     if(peca1.espessura == 1.2 && peca1.material == 'inox304'){
