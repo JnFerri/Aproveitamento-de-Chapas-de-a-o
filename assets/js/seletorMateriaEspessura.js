@@ -2,6 +2,7 @@
 var espessuraGalvanizado = [0.50 , 0.95 , 1.25, 1.95, 2.70]
 var espessuraInox304 = [0.80 , 1.20 , 1.50, 2, 4]
 var espessuraInox430 = [0.5, 0.8, 1.2, 2]
+var espessuraChapaPreta = [4.75]
 
 export function seletorMaterial(){
     
@@ -29,7 +30,14 @@ export function seletorMaterial(){
         `
     }
     
+    }else if(material.selectedIndex === 4){
+        espessura.innerHTML = ''
+        for(var i=0; i<espessuraChapaPreta.length; i++){
+            espessura.innerHTML += `
+        <option value="${espessuraChapaPreta[i]}" class="valorEspessura">${espessuraChapaPreta[i]}</option>
+        `
     }
+}
 }
 
 

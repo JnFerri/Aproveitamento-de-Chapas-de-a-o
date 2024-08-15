@@ -98,6 +98,11 @@ export function calcularTudo(){
         medidasXChapa.push(1030, 1230)
         medidasYChapaB.push(2990)
         fatorMaterial = 0.008
+    }if(peca1.espessura == 4.75 && peca1.material == 'chapaPreta'){
+        medidasXChapa.push(990,1190)
+        medidasYChapaA.push(2190)
+        medidasYChapaB.push(2990)
+        fatorMaterial = 0.00788
     }
 
 

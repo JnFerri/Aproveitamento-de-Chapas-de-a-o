@@ -8,7 +8,6 @@ import { calcularTudo } from "./calculo.js"
 var footer = document.querySelector('footer')
 
 document.onload = publicarHeader()
-document.onload = publicarFooter()
 
 var material = document.getElementById('material')
 var espessura = document.getElementById('espessura')
