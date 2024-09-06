@@ -29,7 +29,7 @@ export function calcularTudo(){
         medidasXChapa.push(990,1190)
        medidasYChapaA.push(1620, 1680 , 2000, 2410, 2990)
        medidasYChapaB.push(2090, 2615, 2771, 2990)
-       fatorMaterial = 0.0078
+       fatorMaterial = 0.00788
     }
 
     if (peca1.espessura == 1.25 ){
@@ -177,6 +177,7 @@ export function calcularTudo(){
         var perda2Horizontal = ((pesoPeca2Horizontal / peca1.pesoSolid)-1) * 100
         var perda2Vertical = ((pesoPeca2Vertical / peca1.pesoSolid)-1) * 100
 
+        console.log(` ${medidasYChapaB[a]} = valor peso da chapa = ${valorPesoChapaB} e horizontal peso = ${pesoPeca2Horizontal} e vertical peso = ${pesoPeca2Vertical} e peso peça = ${pesoPeca2Horizontal} e peso peça vertical = ${pesoPeca2Vertical}` )
 
         var resultado2PecaHorizontal= `<div class="resultado__box">
         <ul type="none">
